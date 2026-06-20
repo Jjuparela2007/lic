@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIC Massage Therapy | Long Island City — Raul Araque, LMT</title>
+<meta name="description" content="Therapeutic massage and Active Isolated Stretching in Long Island City, NY. Be pain-free, flexible, and relaxed with NYS licensed massage therapist Raul Araque.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F3EEE4;
+  --cream-deep:#E9E1D2;
+  --paper:#FBF8F1;
+  --teal:#1F606F;
+  --teal-deep:#173E48;
+  --teal-soft:#3C7E8C;
+  --clay:#C2734E;
+  --ink:#23211C;
+  --ink-soft:#5B564C;
+  --line:rgba(35,33,28,.14);
+  --shadow:0 24px 60px -28px rgba(23,62,72,.45);
+  --display:"Fraunces",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--cream);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{
+  font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--teal-soft);
+}
+
+/* ---- reveal ---- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---- nav ---- */
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .4s ease,box-shadow .4s ease,padding .4s ease}
+header.solid{background:rgba(243,238,228,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;transition:padding .4s ease}
+header.solid .nav{padding:14px 0}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand b{font-family:var(--display);font-size:21px;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.brand span{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--teal-soft);margin-top:5px}
+.menu{display:flex;gap:34px;align-items:center}
+.menu a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .25s;position:relative}
+.menu a:hover{color:var(--teal)}
+.menu a.lnk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--teal);transition:width .3s}
+.menu a.lnk:hover::after{width:100%}
+.book-btn{
+  background:var(--teal);color:var(--paper)!important;padding:12px 24px;border-radius:100px;
+  font-size:13px;letter-spacing:.06em;transition:background .3s,transform .3s
+}
+.book-btn:hover{background:var(--teal-deep);transform:translateY(-2px)}
+.book-btn::after{display:none}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:100px;overflow:hidden;background:transparent}
+.lang button{
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;
+  border:0;background:transparent;color:var(--ink-soft);padding:8px 13px;cursor:pointer;transition:background .25s,color .25s
+}
+.lang button.active{background:var(--teal);color:var(--paper)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+/* ---- hero ---- */
+.hero{padding:170px 0 90px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px);font-weight:300;letter-spacing:-.03em}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero .lede{font-size:19px;color:var(--ink-soft);max-width:30ch;margin:28px 0 36px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn-primary{background:var(--teal);color:var(--paper);padding:16px 34px;border-radius:100px;font-size:14px;letter-spacing:.05em;font-weight:500;transition:background .3s,transform .3s;display:inline-block}
+.btn-primary:hover{background:var(--teal-deep);transform:translateY(-2px)}
+.btn-ghost{padding:16px 8px;font-size:14px;font-weight:500;color:var(--teal);border-bottom:1px solid transparent;transition:border-color .3s}
+.btn-ghost:hover{border-color:var(--teal)}
+.hero-figure{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:3/4;box-shadow:var(--shadow);background:var(--cream-deep)}
+.hero-figure img{width:100%;height:100%;object-fit:cover}
+.hero-badge{
+  position:absolute;left:-26px;bottom:48px;background:var(--paper);border-radius:18px;padding:18px 22px;
+  box-shadow:var(--shadow);display:flex;gap:14px;align-items:center
+}
+.hero-badge .num{font-family:var(--display);font-size:34px;color:var(--teal);line-height:1}
+.hero-badge .lbl{font-size:12px;color:var(--ink-soft);line-height:1.3;max-width:14ch}
+.leaf{position:absolute;top:130px;right:-40px;width:240px;opacity:.5;color:var(--teal-soft);z-index:-1}
+
+/* ---- marquee strip ---- */
+.strip{background:var(--teal-deep);color:var(--cream);padding:20px 0;overflow:hidden;white-space:nowrap}
+.strip .track{display:inline-flex;gap:60px;animation:slide 28s linear infinite}
+.strip span{font-family:var(--display);font-style:italic;font-size:20px;opacity:.92}
+.strip i{color:var(--clay);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.strip .track{animation:none}}
+
+/* ---- section frame ---- */
+section{position:relative}
+.band{padding:110px 0}
+.band.paper{background:var(--paper)}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(34px,5vw,58px);font-weight:300;margin-top:14px}
+.sec-head h2 em{font-style:italic;color:var(--teal)}
+.sec-head p{color:var(--ink-soft);margin-top:18px;font-size:18px}
+
+/* ---- services ---- */
+.svc-list{border-top:1px solid var(--line)}
+.svc{
+  display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:baseline;
+  padding:34px 0;border-bottom:1px solid var(--line);transition:padding .4s ease
+}
+.svc .idx{font-family:var(--display);font-size:15px;color:var(--teal-soft)}
+.svc h3{font-size:27px;font-weight:400}
+.svc .desc{font-size:15.5px;color:var(--ink-soft);margin-top:10px;max-width:62ch}
+.svc .price{font-family:var(--display);font-size:16px;color:var(--ink);white-space:nowrap;text-align:right}
+.svc .price b{display:block;font-weight:500;color:var(--teal);font-size:18px;margin-bottom:4px}
+.svc:hover{padding-left:14px}
+
+/* ---- about ---- */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.about-figure{position:sticky;top:120px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:var(--cream-deep);aspect-ratio:3/4}
+.about-figure img{width:100%;height:100%;object-fit:cover}
+.about-body p{margin-bottom:20px;color:var(--ink-soft)}
+.about-body p.intro{font-family:var(--display);font-size:24px;font-weight:300;line-height:1.4;color:var(--ink)}
+.about-body p.intro em{font-style:italic;color:var(--teal)}
+.cred{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.cred span{font-size:13px;border:1px solid var(--line);border-radius:100px;padding:8px 16px;color:var(--ink-soft)}
+.stats{display:flex;gap:40px;margin:34px 0;flex-wrap:wrap}
+.stats div b{display:block;font-family:var(--display);font-size:42px;color:var(--teal);font-weight:400;line-height:1}
+.stats div span{font-size:13px;color:var(--ink-soft);letter-spacing:.04em}
+
+/* ---- certifications ---- */
+.certs{margin-top:80px;padding-top:56px;border-top:1px solid var(--line)}
+.certs-head{max-width:560px;margin-bottom:36px}
+.certs-head h3{font-size:clamp(26px,3.5vw,38px);font-weight:300;margin-top:12px}
+.certs-head h3 em{font-style:italic;color:var(--teal)}
+.certs-head p{color:var(--ink-soft);margin-top:12px;font-size:16px}
+.certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cert{
+  background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  transition:transform .35s ease,box-shadow .35s ease
+}
+.cert:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.cert-img{aspect-ratio:3/4;background:var(--cream-deep);overflow:hidden;display:flex;align-items:center;justify-content:center;padding:10px;cursor:zoom-in;position:relative}
+.cert-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;transition:transform .35s ease}
+.cert:hover .cert-img img{transform:scale(1.03)}
+.cert-img::after{
+  content:"";position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;
+  background:rgba(11,30,35,.55) center/16px 16px no-repeat;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F3EEE4' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7'/%3E%3C/svg%3E");
+  opacity:0;transition:opacity .3s ease;pointer-events:none
+}
+.cert-img:hover::after{opacity:1}
+
+/* ---- lightbox ---- */
+.lightbox{
+  position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;
+  background:rgba(11,30,35,.92);backdrop-filter:blur(4px);padding:24px;opacity:0;transition:opacity .3s ease
+}
+.lightbox.open{display:flex}
+.lightbox.show{opacity:1}
+.lightbox img{max-width:96vw;max-height:92vh;width:auto;height:auto;object-fit:contain;border-radius:6px;box-shadow:0 20px 60px -10px rgba(0,0,0,.6)}
+.lightbox-close{
+  position:absolute;top:20px;right:24px;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(243,238,228,.92);color:var(--teal-deep);display:flex;align-items:center;justify-content:center;
+  font-size:26px;line-height:1;transition:background .25s,transform .25s
+}
+.lightbox-close:hover{background:#fff;transform:scale(1.06)}
+.cert-cap{padding:16px 18px;font-size:14px;color:var(--ink-soft);line-height:1.45}
+.cert-cap b{display:block;font-family:var(--display);font-size:16px;color:var(--ink);font-weight:500;margin-bottom:3px}
+@media(max-width:760px){.certs-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.certs-grid{grid-template-columns:1fr}}
+
+/* ---- AIS feature ---- */
+.ais{background:var(--teal-deep);color:var(--cream)}
+.ais .eyebrow{color:var(--clay)}
+.ais .sec-head h2{color:var(--cream)}
+.ais .sec-head h2 em{color:#9FC5CE}
+.ais .sec-head p{color:rgba(243,238,228,.72)}
+.ais-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.ais-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px}
+.ais-card .ai-num{font-family:var(--display);font-size:14px;color:var(--clay);letter-spacing:.1em}
+.ais-card h4{font-size:21px;margin:14px 0 10px;color:var(--cream);font-weight:500}
+.ais-card p{font-size:14.5px;color:rgba(243,238,228,.7);line-height:1.6}
+.ais-note{margin-top:44px;font-size:15px;color:rgba(243,238,228,.7);max-width:70ch}
+.ais-note a{color:#9FC5CE;border-bottom:1px solid rgba(159,197,206,.4)}
+
+/* ---- AIS carousel ---- */
+.carousel{margin-top:54px;position:relative}
+.carousel-viewport{overflow:hidden;border-radius:18px;box-shadow:var(--shadow)}
+.carousel-track{display:flex;transition:transform .6s cubic-bezier(.45,0,.15,1)}
+.carousel-slide{min-width:100%;position:relative;aspect-ratio:16/9;background:rgba(255,255,255,.06)}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.carousel-slide .ph{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  color:rgba(243,238,228,.5);font-size:13px;letter-spacing:.08em;border:1px dashed rgba(255,255,255,.18);border-radius:18px
+}
+.carousel-slide .cap{
+  position:absolute;left:0;right:0;bottom:0;padding:40px 28px 22px;
+  background:linear-gradient(transparent,rgba(11,30,35,.82));color:var(--cream);
+  font-family:var(--display);font-style:italic;font-size:18px
+}
+.carousel-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:50%;
+  background:rgba(243,238,228,.92);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:var(--teal-deep);transition:background .25s,transform .25s;box-shadow:0 6px 20px -8px rgba(0,0,0,.5)
+}
+.carousel-btn:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+.carousel-btn svg{width:18px;height:18px}
+.carousel-btn.prev{left:18px}
+.carousel-btn.next{right:18px}
+.carousel-dots{display:flex;gap:10px;justify-content:center;margin-top:24px}
+.carousel-dots button{
+  width:9px;height:9px;border-radius:50%;border:0;cursor:pointer;padding:0;
+  background:rgba(243,238,228,.3);transition:background .25s,width .25s
+}
+.carousel-dots button.active{background:var(--clay);width:26px;border-radius:6px}
+@media(max-width:600px){
+  .carousel-slide .cap{font-size:15px;padding:32px 20px 18px}
+  .carousel-btn{width:40px;height:40px}
+  .carousel-btn.prev{left:10px}.carousel-btn.next{right:10px}
+}
+
+/* ---- office split ---- */
+.office-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.office-cell{padding:48px}
+.office-cell:first-child{border-right:1px solid var(--line);background:var(--cream-deep)}
+.office-cell h3{font-size:26px;margin-bottom:8px}
+.office-cell .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-soft)}
+.office-cell p{font-size:15px;color:var(--ink-soft);margin-top:18px}
+.office-cell .pull{font-family:var(--display);font-style:italic;font-size:19px;color:var(--teal);margin-top:22px}
+
+/* ---- hours / contact ---- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.hours-card{background:var(--paper);border-radius:18px;padding:40px;box-shadow:var(--shadow)}
+.hours-card h3{font-size:24px;margin-bottom:6px}
+.appt{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);background:rgba(194,115,78,.12);padding:6px 12px;border-radius:100px;margin-bottom:22px}
+.hr-row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hr-row:last-child{border:0}
+.hr-row span:first-child{color:var(--ink-soft)}
+.hr-row span:last-child{font-weight:500}
+.contact-info h3{font-size:24px;margin-bottom:24px}
+.ci-item{margin-bottom:26px}
+.ci-item .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-soft);margin-bottom:6px}
+.ci-item .v{font-family:var(--display);font-size:22px;color:var(--ink)}
+.ci-item .v a{color:var(--teal)}
+.contact-cta{margin-top:14px}
+
+/* ---- policies ---- */
+.policies{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.pol{border-top:2px solid var(--teal);padding-top:20px}
+.pol h4{font-size:19px;font-weight:500;margin-bottom:10px}
+.pol p{font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+/* ---- footer ---- */
+footer{background:var(--teal-deep);color:var(--cream);padding:70px 0 40px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:flex-end;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:36px}
+.foot-brand b{font-family:var(--display);font-size:30px;font-weight:400;display:block}
+.foot-brand span{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#9FC5CE}
+.foot-links{display:flex;gap:28px;flex-wrap:wrap}
+.foot-links a{font-size:14px;color:rgba(243,238,228,.78);transition:color .3s}
+.foot-links a:hover{color:var(--cream)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:28px;font-size:13px;color:rgba(243,238,228,.55)}
+.foot-bottom a{color:#9FC5CE}
+
+/* ---- responsive ---- */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .hero-figure{aspect-ratio:4/3;border-radius:24px 120px 24px 120px;max-height:440px}
+  .about-figure{position:static;max-height:480px}
+  .ais-grid,.policies{grid-template-columns:1fr}
+  .office-grid{grid-template-columns:1fr}
+  .office-cell:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);box-shadow:var(--shadow);padding:10px 0}
+  .menu.open{display:flex}
+  .menu a.lnk{padding:16px 32px;width:100%;border-bottom:1px solid var(--line)}
+  .menu .book-btn{margin:14px 32px;text-align:center}
+  .menu .lang{margin:8px 32px}
+  .burger{display:flex}
+  .leaf{display:none}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  .svc{grid-template-columns:1fr;gap:8px}
+  .svc .price{text-align:left}
+  .stats{gap:28px}
+  .hero{padding:140px 0 60px}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><b>LIC Massage</b><span>Therapy · Long Island City</span></a>
+    <nav class="menu" id="menu">
+      <a class="lnk" href="#services" data-i18n="nav.massage">Massage</a>
+      <a class="lnk" href="#stretch" data-i18n="nav.stretch">Stretch Therapy</a>
+      <a class="lnk" href="#office" data-i18n="nav.office">At the Office</a>
+      <a class="lnk" href="#about" data-i18n="nav.about">About Raul</a>
+      <a class="lnk" href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="#contact" class="book-btn" data-i18n="nav.book">Book Now</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="es">ES</button>
+      </div>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow" data-i18n="hero.eyebrow">NYS Licensed Massage Therapist · Since 2003</span>
+      <h1 data-i18n="hero.title">Be pain-free,<br>flexible &amp; <em>relaxed.</em></h1>
+      <p class="lede" data-i18n="hero.lede">Therapeutic massage and Active Isolated Stretching in the heart of Long Island City — bodywork that supports your health and helps you heal.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Book a session</a>
+        <a href="#services" class="btn-ghost" data-i18n="hero.cta2">View services &amp; rates →</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <svg class="leaf" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M100 10C60 60 40 120 100 190C160 120 140 60 100 10Z" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M100 30V180" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M100 70C80 75 65 90 60 110M100 70C120 75 135 90 140 110M100 110C84 114 72 126 68 142M100 110C116 114 128 126 132 142" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <figure class="hero-figure">
+        <img src="img/image.png" alt="Calm massage therapy room in Long Island City">
+        <div class="hero-badge">
+          <div class="num">20+</div>
+          <div class="lbl" data-i18n="hero.badge">years of therapeutic practice</div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span data-i18n="strip.items">Relaxation Massage <i>·</i> Deep Pressure <i>·</i> Active Isolated Stretching <i>·</i> Guided Relaxation <i>·</i> Partner Massage <i>·</i> Chair Massage <i>·</i> Reflexology <i>·</i></span>
+    <span data-i18n="strip.items">Relaxation Massage <i>·</i> Deep Pressure <i>·</i> Active Isolated Stretching <i>·</i> Guided Relaxation <i>·</i> Partner Massage <i>·</i> Chair Massage <i>·</i> Reflexology <i>·</i></span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="svc.eyebrow">Massage in LIC</span>
+      <h2 data-i18n="svc.title">Bodywork that <em>relieves &amp; restores.</em></h2>
+      <p data-i18n="svc.intro">Upwards of ninety percent of disease is stress-related. Massage increases circulation, promotes relaxation, reduces pain, and stimulates the release of endorphins — the body's natural painkillers.</p>
+    </div>
+    <div class="svc-list reveal">
+      <article class="svc">
+        <div class="idx">01</div>
+        <div>
+          <h3 data-i18n="svc.1.name">Relaxation Massage</h3>
+          <p class="desc" data-i18n="svc.1.desc">An all-around massage and manipulation of soft tissue that relieves stress and tension while enhancing blood and lymph circulation. Light to medium pressure, focused on relaxation — an ideal introduction to massage therapy, and may include light Active Isolated Stretching.</p>
+        </div>
+        <div class="price"><b data-i18n="svc.1.from">from $80</b><span data-i18n="svc.1.tiers">½ hr $80 · 1 hr $130 · 1.5 hr $165</span></div>
+      </article>
+      <article class="svc">
+        <div class="idx">02</div>
+        <div>
+          <h3 data-i18n="svc.2.name">Deep Pressure Massage</h3>
+          <p class="desc" data-i18n="svc.2.desc">Focused on specific conditions or areas of discomfort. Ideal for relieving aches from muscle tension or overuse, and for athletes before and after events. Extremely effective for muscle tears, sprains, nerve impingements, and chronic back or shoulder pain. May include Active Isolated Stretching.</p>
+        </div>
+        <div class="price"><b data-i18n="svc.2.from">from $90</b><span data-i18n="svc.2.tiers">½ hr $90 · 1 hr $140 · 1.5 hr $190</span></div>
+      </article>
+      <article class="svc">
+        <div class="idx">03</div>
+        <div>
+          <h3 data-i18n="svc.3.name">How to Massage Your Partner</h3>
+          <p class="desc" data-i18n="svc.3.desc">A relaxed, hands-on session that teaches the best techniques to give your partner a soothing, healing massage — where and how to apply pressure properly without hurting yourself or them. Half the time coaching one partner on the table, half the other. Relaxing, fun, and open to any partners.</p>
+        </div>
+        <div class="price"><b data-i18n="svc.3.from">$205</b><span data-i18n="svc.3.tiers">1.5 hr session</span></div>
+      </article>
+      <article class="svc">
+        <div class="idx">04</div>
+        <div>
+          <h3 data-i18n="svc.4.name">Guided Relaxation Session</h3>
+          <p class="desc" data-i18n="svc.4.desc">Designed to help you relax, breathe, and visualize yourself in a new, empowering way — easing anxiety and worry while improving performance at work, in sports, and in everyday life. You'll leave with tools you can use daily. Conducted on the massage table, fully dressed.</p>
+        </div>
+        <div class="price"><b data-i18n="svc.4.from">$70</b><span data-i18n="svc.4.tiers">45 minutes</span></div>
+      </article>
+    </div>
+    <p class="reveal" style="margin-top:36px;font-family:var(--display);font-style:italic;font-size:18px;color:var(--teal)" data-i18n="svc.gift">Gift certificates available.</p>
+  </div>
+</section>
+
+<!-- STRETCH / AIS -->
+<section class="band ais" id="stretch">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="ais.eyebrow">The Mattes Method</span>
+      <h2 data-i18n="ais.title">Active Isolated <em>Stretching.</em></h2>
+      <p data-i18n="ais.intro">A systematic method of muscle lengthening and fascial release that redefines what it means to stretch. Trained directly by Aaron Mattes, the developer of the method.</p>
+    </div>
+    <div class="ais-grid reveal">
+      <div class="ais-card">
+        <div class="ai-num">/ 01</div>
+        <h4 data-i18n="ais.1.h">Restore range of motion</h4>
+        <p data-i18n="ais.1.p">Active movement balances the pull of soft tissue across a joint, restoring function to both superficial and deep fascial planes.</p>
+      </div>
+      <div class="ais-card">
+        <div class="ai-num">/ 02</div>
+        <h4 data-i18n="ais.2.h">Decrease pain &amp; build strength</h4>
+        <p data-i18n="ais.2.p">AIS helps decrease pain, improve joint flexibility and balance, expand range of motion, and increase muscle strength.</p>
+      </div>
+      <div class="ais-card">
+        <div class="ai-num">/ 03</div>
+        <h4 data-i18n="ais.3.h">Prevent injury, aid recovery</h4>
+        <p data-i18n="ais.3.p">It can assist in injury prevention, improve athletic performance, and aid recovery after a workout.</p>
+      </div>
+    </div>
+    <p class="ais-note reveal" data-i18n="ais.note">Unlike prolonged static stretching — long held the gold standard — which can decrease blood flow and cause irritation, AIS works with the body's physiology rather than against it. Learn more about Aaron Mattes, the definitive educator on flexibility, at <a href="http://www.stretchingusa.com/" target="_blank" rel="noopener">stretchingusa.com</a>.</p>
+
+    <div class="carousel reveal" id="aisCarousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="aisTrack">
+          <div class="carousel-slide">
+            <img src="img/1.jpeg" alt="Active Isolated Stretching session">
+            <div class="cap" data-i18n="ais.slide1">Active Isolated Stretching — hamstring lengthening</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/2.jpeg" alt="AIS shoulder mobility work">
+            <div class="cap" data-i18n="ais.slide2">Shoulder mobility &amp; fascial release</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/3.jpeg" alt="AIS with Aaron Mattes clinic">
+            <div class="cap" data-i18n="ais.slide3">Training with Aaron Mattes, developer of AIS</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/4.jpeg" alt="AIS hip flexor stretch">
+            <div class="cap" data-i18n="ais.slide4">Restoring range of motion, one joint at a time</div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" id="aisPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn next" id="aisNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="carousel-dots" id="aisDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="band paper" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure reveal">
+      <img src="img/rr.png" alt="Raul Araque, Licensed Massage Therapist">
+    </figure>
+    <div class="about-body reveal">
+      <span class="eyebrow" data-i18n="about.eyebrow">About Raul Araque, LMT</span>
+      <p class="intro" style="margin-top:14px" data-i18n="about.intro">My goal is to help you be pain-free, flexible, relaxed, and in your best possible health. <em>Speech is silver, silence is golden.</em></p>
+      <div class="stats">
+        <div><b>2003</b><span data-i18n="about.stat1">Swedish Institute graduate</span></div>
+        <div><b>9</b><span data-i18n="about.stat2">NYC Marathons completed</span></div>
+        <div><b>3</b><span data-i18n="about.stat3">Half-Ironman races</span></div>
+      </div>
+      <p data-i18n="about.p1">I'm a New York State licensed massage therapist specializing in therapeutic massage and Active Isolated Stretching. I earned an Associates Degree in Occupational Studies in 2003 from the Swedish Institute College of Health Sciences, one of the oldest massage schools in the country, and was a massage therapist at The Yale Club of New York in Manhattan, where I met clients from all over the world.</p>
+      <p data-i18n="about.p2">My practice has allowed me to work with all sorts of people — mothers, seniors, artists, casual athletes to ultra-marathoners, and performers and dancers at the Mark Morris Dance Center. I've learned directly from industry experts including Aaron Mattes, Mark Allen, and Shari Auth, LMT.</p>
+      <p data-i18n="about.p3">I practice meditation daily and attend retreats regularly, including three 10-day silent Vipassana retreats. If you're experiencing pain, recovering from an injury or surgery, and want to feel better, please reach out for a consultation.</p>
+      <div class="cred">
+        <span data-i18n="about.c1">NYS Licensed</span>
+        <span data-i18n="about.c2">Mattes Method AIS</span>
+        <span data-i18n="about.c3">Swedish Institute, 2003</span>
+        <span data-i18n="about.c4">Therapeutic Massage</span>
+        <span data-i18n="about.c5">Guided Relaxation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="certs reveal">
+      <div class="certs-head">
+        <span class="eyebrow" data-i18n="certs.eyebrow">Credentials</span>
+        <h3 data-i18n="certs.title">Certifications &amp; <em>training.</em></h3>
+        <p data-i18n="certs.intro">Formal education and continued training behind every session.</p>
+      </div>
+      <div class="certs-grid">
+        <figure class="cert">
+          <div class="cert-img"><img src="img/Massage-license-1024x791.jpg" alt="Certification 1"></div>
+          <figcaption class="cert-cap"><b data-i18n="certs.1.t">Licensed Massage Therapist in the State of New York</b><span data-i18n="certs.1.s">Licensed since 2003 · Issued by The University of the State of New York · Education Department</span></figcaption>
+        </figure>
+        <figure class="cert">
+          <div class="cert-img"><img src="img/AIS-certificate-Jan15.jpg" alt="Certification 2"></div>
+          <figcaption class="cert-cap"><b data-i18n="certs.2.t">Active Isolated Stretching — Advanced Seminar</b><span data-i18n="certs.2.s">Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT</span></figcaption>
+        </figure>
+        <figure class="cert">
+          <div class="cert-img"><img src="img/AIS-certificate-May-15.jpg" alt="Certification 3"></div>
+          <figcaption class="cert-cap"><b data-i18n="certs.3.t">Active Isolated Stretching Seminar</b><span data-i18n="certs.3.s">Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT</span></figcaption>
+        </figure>
+        <figure class="cert">
+          <div class="cert-img"><img src="img/AIS-certificate-Oct-14.jpg" alt="Certification 4"></div>
+          <figcaption class="cert-cap"><b data-i18n="certs.4.t">Active Isolated Stretching Seminar</b><span data-i18n="certs.4.s">Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE -->
+<section class="band" id="office">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="office.eyebrow">Services @ the Office</span>
+      <h2 data-i18n="office.title">Wellness, <em>brought to work.</em></h2>
+      <p data-i18n="office.intro">On-site therapy that keeps teams healthier, happier, and sharper. Job stress costs employers an estimated $200&nbsp;billion+ per year — many companies now treat on-site massage as a core part of their wellness program.</p>
+    </div>
+    <div class="office-grid reveal">
+      <div class="office-cell">
+        <span class="tag" data-i18n="office.1.tag">Chair massage</span>
+        <h3 data-i18n="office.1.h">Massage @ the Office</h3>
+        <p data-i18n="office.1.p">On-site massage on a special massage chair, given in 10–20 minute increments per client — no oils, done through the clothing. Focuses on the back, head, neck, shoulders, arms, and hands. An excellent break in the busy corporate day, and especially useful for preventing repetitive stress conditions like carpal tunnel and tension headaches.</p>
+        <p class="pull" data-i18n="office.1.pull">Healthier, happier, sharper employees.</p>
+      </div>
+      <div class="office-cell">
+        <span class="tag" data-i18n="office.2.tag">Mobile reflexology</span>
+        <h3 data-i18n="office.2.h">Mobile Reflexology</h3>
+        <p data-i18n="office.2.p">The application of appropriate pressure by thumbs and fingers to specific points on the hands and feet to improve health — conveniently done in a special reflexology lounge chair. These reflex points correspond to different body organs and systems, and studies link this therapy to reduced sick leave and absenteeism.</p>
+        <p class="pull" data-i18n="office.2.pull">Please contact me for details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band paper" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Visit · Hours · Contact</span>
+      <h2 data-i18n="contact.title">Come <em>see me</em> in LIC.</h2>
+      <p data-i18n="contact.intro">By appointment only — please call or email and include your name, contact information, and the days and times you'd like to come in.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="hours-card reveal">
+        <span class="appt" data-i18n="contact.appt">By appointment only</span>
+        <h3 data-i18n="contact.hoursTitle">Hours &amp; Location</h3>
+        <p style="color:var(--ink-soft);margin-bottom:18px;font-size:15px" data-i18n="contact.addr">12-17 Jackson Ave, Long Island City, NY 11101, United States</p>
+        <div class="hr-row"><span data-i18n="contact.d1">Monday – Friday</span><span>9:30 am – 7:00 pm</span></div>
+        <div class="hr-row"><span data-i18n="contact.d2">Saturday</span><span>9:30 am – 6:00 pm</span></div>
+        <div class="hr-row"><span data-i18n="contact.d3">Sunday</span><span>10:00 am – 5:00 pm</span></div>
+      </div>
+      <div class="contact-info reveal">
+        <h3 data-i18n="contact.getInTouch">Get in touch</h3>
+        <div class="ci-item">
+          <div class="k" data-i18n="contact.kEmail">Email</div>
+          <div class="v"><a href="mailto:ra@licmassagetherapy.com">ra@licmassagetherapy.com</a></div>
+        </div>
+        <div class="ci-item">
+          <div class="k" data-i18n="contact.kPhone">Phone</div>
+          <div class="v"><a href="tel:7184781951">718-478-1951</a></div>
+        </div>
+        <div class="ci-item">
+          <div class="k" data-i18n="contact.kSocial">Social</div>
+          <div class="v" style="font-size:18px"><a href="https://www.facebook.com/licmst/" target="_blank" rel="noopener" data-i18n="contact.fb">LIC Massage &amp; Stretch Therapy on Facebook →</a></div>
+        </div>
+        <div class="contact-cta">
+          <a href="mailto:ra@licmassagetherapy.com" class="btn-primary" data-i18n="contact.emailBtn">Email to book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="policies reveal">
+      <div class="pol">
+        <h4 data-i18n="pol.1.h">Cancellation</h4>
+        <p data-i18n="pol.1.p">24 hours' advance notice is required to cancel. This gives someone else the opportunity to book. Without 24 hours' notice, you'll be charged the full amount of the session, payable within 24 hours via emailed invoice and credit card.</p>
+      </div>
+      <div class="pol">
+        <h4 data-i18n="pol.2.h">No-shows</h4>
+        <p data-i18n="pol.2.p">Anyone who forgets or chooses to skip an appointment for any reason is considered a no-show and will be charged in full for the missed session, payable within 24 hours via emailed invoice.</p>
+      </div>
+      <div class="pol">
+        <h4 data-i18n="pol.3.h">Late arrivals</h4>
+        <p data-i18n="pol.3.p">If you arrive late, your session may be shortened to accommodate appointments that follow. Regardless of the length given, you're responsible for the full session. Please plan accordingly and arrive on time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <b>LIC Massage Therapy</b>
+        <span data-i18n="foot.tag">Long Island City · New York</span>
+      </div>
+      <nav class="foot-links">
+        <a href="#services" data-i18n="nav.massage">Massage</a>
+        <a href="#stretch" data-i18n="nav.stretch">Stretch Therapy</a>
+        <a href="#office" data-i18n="nav.office">At the Office</a>
+        <a href="#about" data-i18n="nav.about">About Raul</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> LIC Massage Therapy. <span data-i18n="foot.rights">All rights reserved.</span></span>
+      <span data-i18n="foot.credit">Raul Araque, NYS Licensed Massage Therapist · <a href="mailto:ra@licmassagetherapy.com">ra@licmassagetherapy.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="" alt="">
+</div>
+
+<script>
+/* ---------- i18n translations ---------- */
+const I18N = {
+  en: {
+    "nav.massage":"Massage","nav.stretch":"Stretch Therapy","nav.office":"At the Office",
+    "nav.about":"About Raul","nav.contact":"Contact","nav.book":"Book Now",
+    "hero.eyebrow":"NYS Licensed Massage Therapist · Since 2003",
+    "hero.title":"Be pain-free,<br>flexible &amp; <em>relaxed.</em>",
+    "hero.lede":"Therapeutic massage and Active Isolated Stretching in the heart of Long Island City — bodywork that supports your health and helps you heal.",
+    "hero.cta1":"Book a session","hero.cta2":"View services &amp; rates →",
+    "hero.badge":"years of therapeutic practice",
+    "strip.items":"Relaxation Massage <i>·</i> Deep Pressure <i>·</i> Active Isolated Stretching <i>·</i> Guided Relaxation <i>·</i> Partner Massage <i>·</i> Chair Massage <i>·</i> Reflexology <i>·</i>",
+    "svc.eyebrow":"Massage in LIC",
+    "svc.title":"Bodywork that <em>relieves &amp; restores.</em>",
+    "svc.intro":"Upwards of ninety percent of disease is stress-related. Massage increases circulation, promotes relaxation, reduces pain, and stimulates the release of endorphins — the body's natural painkillers.",
+    "svc.1.name":"Relaxation Massage",
+    "svc.1.desc":"An all-around massage and manipulation of soft tissue that relieves stress and tension while enhancing blood and lymph circulation. Light to medium pressure, focused on relaxation — an ideal introduction to massage therapy, and may include light Active Isolated Stretching.",
+    "svc.1.from":"from $80","svc.1.tiers":"½ hr $80 · 1 hr $130 · 1.5 hr $165",
+    "svc.2.name":"Deep Pressure Massage",
+    "svc.2.desc":"Focused on specific conditions or areas of discomfort. Ideal for relieving aches from muscle tension or overuse, and for athletes before and after events. Extremely effective for muscle tears, sprains, nerve impingements, and chronic back or shoulder pain. May include Active Isolated Stretching.",
+    "svc.2.from":"from $90","svc.2.tiers":"½ hr $90 · 1 hr $140 · 1.5 hr $190",
+    "svc.3.name":"How to Massage Your Partner",
+    "svc.3.desc":"A relaxed, hands-on session that teaches the best techniques to give your partner a soothing, healing massage — where and how to apply pressure properly without hurting yourself or them. Half the time coaching one partner on the table, half the other. Relaxing, fun, and open to any partners.",
+    "svc.3.from":"$205","svc.3.tiers":"1.5 hr session",
+    "svc.4.name":"Guided Relaxation Session",
+    "svc.4.desc":"Designed to help you relax, breathe, and visualize yourself in a new, empowering way — easing anxiety and worry while improving performance at work, in sports, and in everyday life. You'll leave with tools you can use daily. Conducted on the massage table, fully dressed.",
+    "svc.4.from":"$70","svc.4.tiers":"45 minutes",
+    "svc.gift":"Gift certificates available.",
+    "ais.eyebrow":"The Mattes Method",
+    "ais.title":"Active Isolated <em>Stretching.</em>",
+    "ais.intro":"A systematic method of muscle lengthening and fascial release that redefines what it means to stretch. Trained directly by Aaron Mattes, the developer of the method.",
+    "ais.1.h":"Restore range of motion",
+    "ais.1.p":"Active movement balances the pull of soft tissue across a joint, restoring function to both superficial and deep fascial planes.",
+    "ais.2.h":"Decrease pain &amp; build strength",
+    "ais.2.p":"AIS helps decrease pain, improve joint flexibility and balance, expand range of motion, and increase muscle strength.",
+    "ais.3.h":"Prevent injury, aid recovery",
+    "ais.3.p":"It can assist in injury prevention, improve athletic performance, and aid recovery after a workout.",
+    "ais.note":"Unlike prolonged static stretching — long held the gold standard — which can decrease blood flow and cause irritation, AIS works with the body's physiology rather than against it. Learn more about Aaron Mattes, the definitive educator on flexibility, at <a href=\"http://www.stretchingusa.com/\" target=\"_blank\" rel=\"noopener\">stretchingusa.com</a>.",
+    "ais.slide1":"Active Isolated Stretching — hamstring lengthening",
+    "ais.slide2":"Shoulder mobility &amp; fascial release",
+    "ais.slide3":"Training with Aaron Mattes, developer of AIS",
+    "ais.slide4":"Restoring range of motion, one joint at a time",
+    "about.eyebrow":"About Raul Araque, LMT",
+    "about.intro":"My goal is to help you be pain-free, flexible, relaxed, and in your best possible health. <em>Speech is silver, silence is golden.</em>",
+    "about.stat1":"Swedish Institute graduate","about.stat2":"NYC Marathons completed","about.stat3":"Half-Ironman races",
+    "about.p1":"I'm a New York State licensed massage therapist specializing in therapeutic massage and Active Isolated Stretching. I earned an Associates Degree in Occupational Studies in 2003 from the Swedish Institute College of Health Sciences, one of the oldest massage schools in the country, and was a massage therapist at The Yale Club of New York in Manhattan, where I met clients from all over the world.",
+    "about.p2":"My practice has allowed me to work with all sorts of people — mothers, seniors, artists, casual athletes to ultra-marathoners, and performers and dancers at the Mark Morris Dance Center. I've learned directly from industry experts including Aaron Mattes, Mark Allen, and Shari Auth, LMT.",
+    "about.p3":"I practice meditation daily and attend retreats regularly, including three 10-day silent Vipassana retreats. If you're experiencing pain, recovering from an injury or surgery, and want to feel better, please reach out for a consultation.",
+    "about.c1":"NYS Licensed","about.c2":"Mattes Method AIS","about.c3":"Swedish Institute, 2003","about.c4":"Therapeutic Massage","about.c5":"Guided Relaxation",
+    "certs.eyebrow":"Credentials",
+    "certs.title":"Certifications &amp; <em>training.</em>",
+    "certs.intro":"Formal education and continued training behind every session.",
+    "certs.1.t":"Licensed Massage Therapist in the State of New York","certs.1.s":"Licensed since 2003 · Issued by The University of the State of New York · Education Department",
+    "certs.2.t":"Active Isolated Stretching — Advanced Seminar","certs.2.s":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+    "certs.3.t":"Active Isolated Stretching Seminar","certs.3.s":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+    "certs.4.t":"Active Isolated Stretching Seminar","certs.4.s":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+    "office.eyebrow":"Services @ the Office",
+    "office.title":"Wellness, <em>brought to work.</em>",
+    "office.intro":"On-site therapy that keeps teams healthier, happier, and sharper. Job stress costs employers an estimated $200&nbsp;billion+ per year — many companies now treat on-site massage as a core part of their wellness program.",
+    "office.1.tag":"Chair massage","office.1.h":"Massage @ the Office",
+    "office.1.p":"On-site massage on a special massage chair, given in 10–20 minute increments per client — no oils, done through the clothing. Focuses on the back, head, neck, shoulders, arms, and hands. An excellent break in the busy corporate day, and especially useful for preventing repetitive stress conditions like carpal tunnel and tension headaches.",
+    "office.1.pull":"Healthier, happier, sharper employees.",
+    "office.2.tag":"Mobile reflexology","office.2.h":"Mobile Reflexology",
+    "office.2.p":"The application of appropriate pressure by thumbs and fingers to specific points on the hands and feet to improve health — conveniently done in a special reflexology lounge chair. These reflex points correspond to different body organs and systems, and studies link this therapy to reduced sick leave and absenteeism.",
+    "office.2.pull":"Please contact me for details.",
+    "contact.eyebrow":"Visit · Hours · Contact",
+    "contact.title":"Come <em>see me</em> in LIC.",
+    "contact.intro":"By appointment only — please call or email and include your name, contact information, and the days and times you'd like to come in.",
+    "contact.appt":"By appointment only","contact.hoursTitle":"Hours &amp; Location",
+    "contact.addr":"12-17 Jackson Ave, Long Island City",
+    "contact.d1":"Monday – Friday","contact.d2":"Saturday","contact.d3":"Sunday",
+    "contact.getInTouch":"Get in touch","contact.kEmail":"Email","contact.kPhone":"Phone","contact.kSocial":"Social",
+    "contact.fb":"LIC Massage &amp; Stretch Therapy on Facebook →","contact.emailBtn":"Email to book",
+    "pol.1.h":"Cancellation",
+    "pol.1.p":"24 hours' advance notice is required to cancel. This gives someone else the opportunity to book. Without 24 hours' notice, you'll be charged the full amount of the session, payable within 24 hours via emailed invoice and credit card.",
+    "pol.2.h":"No-shows",
+    "pol.2.p":"Anyone who forgets or chooses to skip an appointment for any reason is considered a no-show and will be charged in full for the missed session, payable within 24 hours via emailed invoice.",
+    "pol.3.h":"Late arrivals",
+    "pol.3.p":"If you arrive late, your session may be shortened to accommodate appointments that follow. Regardless of the length given, you're responsible for the full session. Please plan accordingly and arrive on time.",
+    "foot.tag":"Long Island City · New York","foot.rights":"All rights reserved.",
+    "foot.credit":"Raul Araque, NYS Licensed Massage Therapist · <a href=\"mailto:ra@licmassagetherapy.com\">ra@licmassagetherapy.com</a>"
+  },
+  es: {
+    "nav.massage":"Masajes","nav.stretch":"Terapia de Estiramiento","nav.office":"En la Oficina",
+    "nav.about":"Sobre Raul","nav.contact":"Contacto","nav.book":"Reservar",
+    "hero.eyebrow":"Masajista Licenciado del Estado de NY · Desde 2003",
+    "hero.title":"Sin dolor,<br>flexible y <em>relajado.</em>",
+    "hero.lede":"Masaje terapéutico y Estiramiento Aislado Activo en el corazón de Long Island City — un trabajo corporal que cuida tu salud y te ayuda a sanar.",
+    "hero.cta1":"Reservar una sesión","hero.cta2":"Ver servicios y tarifas →",
+    "hero.badge":"años de práctica terapéutica",
+    "strip.items":"Masaje de Relajación <i>·</i> Presión Profunda <i>·</i> Estiramiento Aislado Activo <i>·</i> Relajación Guiada <i>·</i> Masaje en Pareja <i>·</i> Masaje en Silla <i>·</i> Reflexología <i>·</i>",
+    "svc.eyebrow":"Masajes en LIC",
+    "svc.title":"Trabajo corporal que <em>alivia y restaura.</em>",
+    "svc.intro":"Más del noventa por ciento de las enfermedades están relacionadas con el estrés. El masaje aumenta la circulación, promueve la relajación, reduce el dolor y estimula la liberación de endorfinas — los analgésicos naturales del cuerpo.",
+    "svc.1.name":"Masaje de Relajación",
+    "svc.1.desc":"Un masaje integral y manipulación de tejidos blandos que alivia el estrés y la tensión mientras mejora la circulación sanguínea y linfática. Presión de leve a media, enfocada en la relajación — una introducción ideal a la terapia de masaje, y puede incluir Estiramiento Aislado Activo suave.",
+    "svc.1.from":"desde $80","svc.1.tiers":"½ hr $80 · 1 hr $130 · 1.5 hr $165",
+    "svc.2.name":"Masaje de Presión Profunda",
+    "svc.2.desc":"Enfocado en condiciones específicas o zonas de molestia. Ideal para aliviar dolores por tensión o sobreuso muscular, y para atletas antes y después de competir. Muy efectivo para desgarros musculares, esguinces, compresiones nerviosas y dolor crónico de espalda u hombros. Puede incluir Estiramiento Aislado Activo.",
+    "svc.2.from":"desde $90","svc.2.tiers":"½ hr $90 · 1 hr $140 · 1.5 hr $190",
+    "svc.3.name":"Cómo Masajear a tu Pareja",
+    "svc.3.desc":"Una sesión relajada y práctica que enseña las mejores técnicas para dar a tu pareja un masaje sanador y reconfortante — dónde y cómo aplicar la presión correctamente sin lastimarte ni lastimarla. La mitad del tiempo guío a una persona en la camilla, la otra mitad a la otra. Relajante, divertida y abierta a cualquier pareja.",
+    "svc.3.from":"$205","svc.3.tiers":"sesión de 1.5 hr",
+    "svc.4.name":"Sesión de Relajación Guiada",
+    "svc.4.desc":"Diseñada para ayudarte a relajarte, respirar y visualizarte de una forma nueva y poderosa — aliviando la ansiedad y la preocupación mientras mejora tu desempeño en el trabajo, el deporte y la vida diaria. Saldrás con herramientas que puedes usar a diario. Se realiza sobre la camilla, completamente vestido.",
+    "svc.4.from":"$70","svc.4.tiers":"45 minutos",
+    "svc.gift":"Certificados de regalo disponibles.",
+    "ais.eyebrow":"El Método Mattes",
+    "ais.title":"Estiramiento Aislado <em>Activo.</em>",
+    "ais.intro":"Un método sistemático de elongación muscular y liberación fascial que redefine lo que significa estirar. Entrenado directamente por Aaron Mattes, creador del método.",
+    "ais.1.h":"Recupera el rango de movimiento",
+    "ais.1.p":"El movimiento activo equilibra la tensión del tejido blando a través de la articulación, restaurando la función de los planos fasciales superficiales y profundos.",
+    "ais.2.h":"Reduce el dolor y gana fuerza",
+    "ais.2.p":"El AIS ayuda a reducir el dolor, mejorar la flexibilidad y el equilibrio articular, ampliar el rango de movimiento y aumentar la fuerza muscular.",
+    "ais.3.h":"Previene lesiones, acelera la recuperación",
+    "ais.3.p":"Puede ayudar a prevenir lesiones, mejorar el rendimiento deportivo y acelerar la recuperación después del ejercicio.",
+    "ais.note":"A diferencia del estiramiento estático prolongado — durante años considerado el estándar de oro — que puede reducir el flujo sanguíneo y causar irritación, el AIS trabaja con la fisiología del cuerpo en lugar de en su contra. Conoce más sobre Aaron Mattes, el educador definitivo en flexibilidad, en <a href=\"http://www.stretchingusa.com/\" target=\"_blank\" rel=\"noopener\">stretchingusa.com</a>.",
+    "ais.slide1":"Estiramiento Aislado Activo — elongación de isquiotibiales",
+    "ais.slide2":"Movilidad de hombro y liberación fascial",
+    "ais.slide3":"Entrenamiento con Aaron Mattes, creador del AIS",
+    "ais.slide4":"Recuperando el rango de movimiento, articulación por articulación",
+    "about.eyebrow":"Sobre Raul Araque, LMT",
+    "about.intro":"Mi objetivo es ayudarte a estar sin dolor, flexible, relajado y en tu mejor estado de salud posible. <em>La palabra es plata, el silencio es oro.</em>",
+    "about.stat1":"Graduado del Swedish Institute","about.stat2":"Maratones de NYC completados","about.stat3":"Carreras Half-Ironman",
+    "about.p1":"Soy masajista licenciado por el Estado de Nueva York, especializado en masaje terapéutico y Estiramiento Aislado Activo. Obtuve un Associates Degree en Estudios Ocupacionales en 2003 del Swedish Institute College of Health Sciences, una de las escuelas de masaje más antiguas del país, y fui masajista en The Yale Club de Nueva York en Manhattan, donde atendí a personas de todo el mundo.",
+    "about.p2":"Mi práctica me ha permitido trabajar con todo tipo de personas — madres, adultos mayores, artistas, desde atletas casuales hasta ultra-maratonistas, y bailarines del Mark Morris Dance Center. He aprendido directamente de expertos de la industria como Aaron Mattes, Mark Allen y Shari Auth, LMT.",
+    "about.p3":"Practico meditación a diario y asisto a retiros con regularidad, incluyendo tres retiros de silencio Vipassana de 10 días. Si sientes dolor, te estás recuperando de una lesión o cirugía y quieres sentirte mejor, contáctame para una consulta.",
+    "about.c1":"Licenciado en NY","about.c2":"Método Mattes AIS","about.c3":"Swedish Institute, 2003","about.c4":"Masaje Terapéutico","about.c5":"Relajación Guiada",
+    "certs.eyebrow":"Credenciales",
+    "certs.title":"Certificaciones y <em>formación.</em>",
+    "certs.intro":"Educación formal y formación continua detrás de cada sesión.",
+    "certs.1.t":"Masajista Licenciado en el Estado de Nueva York","certs.1.s":"Licenciado desde 2003 · Emitido por The University of the State of New York · Education Department",
+    "certs.2.t":"Estiramiento Aislado Activo — Seminario Avanzado","certs.2.s":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+    "certs.3.t":"Seminario de Estiramiento Aislado Activo","certs.3.s":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+    "certs.4.t":"Seminario de Estiramiento Aislado Activo","certs.4.s":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+    "office.eyebrow":"Servicios en la Oficina",
+    "office.title":"Bienestar, <em>llevado al trabajo.</em>",
+    "office.intro":"Terapia a domicilio que mantiene a los equipos más sanos, felices y enfocados. El estrés laboral le cuesta a las empresas más de $200&nbsp;mil millones al año — hoy muchas compañías incluyen el masaje en sitio como parte central de su programa de bienestar.",
+    "office.1.tag":"Masaje en silla","office.1.h":"Masaje en la Oficina",
+    "office.1.p":"Masaje a domicilio en una silla especial, en intervalos de 10 a 20 minutos por cliente — sin aceites, a través de la ropa. Se enfoca en espalda, cabeza, cuello, hombros, brazos y manos. Una excelente pausa en el ajetreo de la jornada laboral, y especialmente útil para prevenir lesiones por esfuerzo repetitivo como el síndrome del túnel carpiano y las cefaleas tensionales.",
+    "office.1.pull":"Empleados más sanos, felices y enfocados.",
+    "office.2.tag":"Reflexología móvil","office.2.h":"Reflexología Móvil",
+    "office.2.p":"La aplicación de presión adecuada con dedos y pulgares en puntos específicos de las manos y los pies para mejorar la salud — cómodamente realizada en una silla especial de reflexología. Estos puntos reflejos corresponden a distintos órganos y sistemas del cuerpo, y diversos estudios vinculan esta terapia con la reducción de ausencias laborales.",
+    "office.2.pull":"Contáctame para más detalles.",
+    "contact.eyebrow":"Visítanos · Horario · Contacto",
+    "contact.title":"Ven a <em>verme</em> en LIC.",
+    "contact.intro":"Solo con cita previa — por favor llama o escribe un correo e incluye tu nombre, datos de contacto y los días y horarios en que te gustaría venir.",
+    "contact.appt":"Solo con cita previa","contact.hoursTitle":"Horario y Ubicación",
+    "contact.addr":"12-17 Jackson Ave, Long Island City",
+    "contact.d1":"Lunes – Viernes","contact.d2":"Sábado","contact.d3":"Domingo",
+    "contact.getInTouch":"Ponte en contacto","contact.kEmail":"Correo","contact.kPhone":"Teléfono","contact.kSocial":"Redes",
+    "contact.fb":"LIC Massage &amp; Stretch Therapy en Facebook →","contact.emailBtn":"Escríbeme para reservar",
+    "pol.1.h":"Cancelación",
+    "pol.1.p":"Se requiere aviso con 24 horas de anticipación para cancelar. Esto le da a otra persona la oportunidad de reservar. Sin aviso de 24 horas, se cobrará el valor completo de la sesión, pagadero dentro de las 24 horas mediante factura por correo y tarjeta de crédito.",
+    "pol.2.h":"Ausencias (no-show)",
+    "pol.2.p":"Quien olvide o decida no asistir a su cita por cualquier motivo se considera una ausencia y se le cobrará el valor completo de la sesión perdida, pagadero dentro de las 24 horas mediante factura por correo.",
+    "pol.3.h":"Llegadas tarde",
+    "pol.3.p":"Si llegas tarde, tu sesión podría acortarse para respetar las citas siguientes. Sin importar la duración real, eres responsable del valor completo de la sesión. Por favor organiza tu tiempo y llega puntual.",
+    "foot.tag":"Long Island City · Nueva York","foot.rights":"Todos los derechos reservados.",
+    "foot.credit":"Raul Araque, Masajista Licenciado del Estado de NY · <a href=\"mailto:ra@licmassagetherapy.com\">ra@licmassagetherapy.com</a>"
+  }
+};
+
+/* ---------- apply translations ---------- */
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key] != null) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+}
+
+// year
+document.getElementById('yr').textContent=new Date().getFullYear();
+setLang('en'); // default English
+
+document.querySelectorAll('.lang button').forEach(b=>{
+  b.addEventListener('click',()=>setLang(b.dataset.lang));
+});
+
+// sticky header
+const hdr=document.getElementById('hdr');
+const onScroll=()=>hdr.classList.toggle('solid',window.scrollY>40);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+// mobile menu
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+// ---- AIS carousel: autoplay + arrows + dots ----
+(function(){
+  const track=document.getElementById('aisTrack');
+  if(!track) return;
+  const slides=Array.from(track.children);
+  const dotsWrap=document.getElementById('aisDots');
+  const prev=document.getElementById('aisPrev');
+  const next=document.getElementById('aisNext');
+  const carousel=document.getElementById('aisCarousel');
+  let i=0, timer=null;
+  const DELAY=5000;
+
+  slides.forEach((_,idx)=>{
+    const d=document.createElement('button');
+    d.setAttribute('aria-label','Slide '+(idx+1));
+    d.addEventListener('click',()=>{go(idx);restart();});
+    dotsWrap.appendChild(d);
+  });
+  const dots=Array.from(dotsWrap.children);
+
+  function go(n){
+    i=(n+slides.length)%slides.length;
+    track.style.transform='translateX('+(-i*100)+'%)';
+    dots.forEach((d,k)=>d.classList.toggle('active',k===i));
+  }
+  function start(){
+    const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce) return;
+    timer=setInterval(()=>go(i+1),DELAY);
+  }
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function restart(){stop();start();}
+
+  prev.addEventListener('click',()=>{go(i-1);restart();});
+  next.addEventListener('click',()=>{go(i+1);restart();});
+  carousel.addEventListener('mouseenter',stop);
+  carousel.addEventListener('mouseleave',start);
+
+  go(0);
+  start();
+})();
+
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// cert lightbox
+(function(){
+  const lb=document.getElementById('lightbox');
+  if(!lb) return;
+  const lbImg=lb.querySelector('img');
+  const closeBtn=lb.querySelector('.lightbox-close');
+  function open(src,alt){
+    lbImg.src=src; lbImg.alt=alt||'';
+    lb.classList.add('open');
+    requestAnimationFrame(()=>lb.classList.add('show'));
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    lb.classList.remove('show');
+    document.body.style.overflow='';
+    setTimeout(()=>{lb.classList.remove('open');lbImg.src='';},300);
+  }
+  document.querySelectorAll('.cert-img').forEach(box=>{
+    box.addEventListener('click',()=>{
+      const img=box.querySelector('img');
+      if(img) open(img.src,img.alt);
+    });
+  });
+  closeBtn.addEventListener('click',close);
+  lb.addEventListener('click',e=>{if(e.target===lb)close();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('open'))close();});
+})();
+</script>
+</body>
+</html>
